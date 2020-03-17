@@ -146,13 +146,6 @@ ul {
     .project-grid .text-description {
       margin-bottom: 2rem; } }
 
-.fix-header {
-  position: fixed !important;
-  top: 0 !important;
-  width: 100%;
-  background: #fff;
-  z-index: 1; }
-
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -213,7 +206,6 @@ ul {
       opacity: 1; }
 
 #welcome-section {
-  margin-top: 7rem;
   height: auto; }
   #welcome-section p.lead {
     display: block;
@@ -250,6 +242,3 @@ ul {
     margin: 2rem 0;
     font-size: 1rem;
     margin-bottom: 2rem; }
-
-#section-wrap {
-  min-height: 50vh; }

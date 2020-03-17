@@ -178,13 +178,13 @@ ul {
 }
 // nav
 
-.fix-header {
-  position: fixed !important;
-  top: 0 !important;
-  width: 100%;
-  background: #fff;
-  z-index: 1;
-}
+// .fix-header {
+//   position: fixed !important;
+//   top: 0 !important;
+//   width: 100%;
+//   background: #fff;
+//   z-index: 1;
+// }
 
 #navbar {
   display: flex;
@@ -269,7 +269,7 @@ ul {
 
 // welcome section
 #welcome-section {
-  margin-top: 7rem;
+  // margin-top: 7rem;
   height: auto;
   p.lead {
     display: block;
@@ -320,6 +320,6 @@ ul {
   }
 }
 
-#section-wrap {
-  min-height: 50vh;
-}
+// #section-wrap {
+//   min-height: 50vh;
+// }
