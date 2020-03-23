@@ -7,8 +7,8 @@
 .project-tile {
   display: flex;
   align-items: center;
-  // margin: 0 0.8rem 2rem;
-  // position: relative;
+  margin: 0 0.8rem 2rem;
+  position: relative;
   overflow: hidden;
   &:hover .image-area img {
     transform: scale(0.95);
