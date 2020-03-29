@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
 
 @import "variable";
 @import "configure";
@@ -8,11 +8,22 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Karla", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  // font-family: "Adobe Garamond Pro", "MS PMincho", serif;
   box-sizing: border-box;
   line-height: 1.6;
 }
 
+#text-intro {
+  color: #000;
+}
+
+#eng-serif {
+  font-family: "Adobe Garamond Pro", "MS PMincho", serif;
+}
+#cn-serif {
+  font-family: "Source Han Serif", "MS PMincho", serif;
+}
 a {
   text-decoration: none;
   color: $dark-color;
@@ -20,6 +31,7 @@ a {
 
 p {
   margin: 0.75rem 0;
+  color: #777;
 }
 
 img {
@@ -31,7 +43,7 @@ ul {
 }
 
 .bold-text {
-  font-weight: bold;
+  font-weight: 500;
 }
 // #welcome-section {
 //   height: 100vh;
@@ -68,7 +80,8 @@ ul {
 // }
 %btn-shared {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 300;
   text-align: center;
   display: inline-block;
   padding: 0.5rem 0.8rem;
@@ -108,22 +121,29 @@ ul {
 // }
 
 .web-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.2rem;
+  font-weight: 600;
   margin-bottom: 2rem;
 }
 
+.url {
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
 .lead {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
-  font-weight: normal;
+  font-weight: 300;
+  color: #666;
 }
 
 .text-category {
   font-size: 0.8rem;
   text-align: left;
-  color: #666;
   margin-bottom: 0;
+  font-weight: 300;
   & .tools {
     font-size: 12px;
     padding: 0 10px;
@@ -141,6 +161,7 @@ ul {
   color: #666;
   margin-top: 0.5rem;
   line-height: 1.5;
+  font-weight: 300;
 }
 .text-center {
   text-align: center;
@@ -148,7 +169,8 @@ ul {
 
 .project-title {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   margin-bottom: 0;
 }
 @media (max-width: 786px) {
@@ -163,11 +185,12 @@ ul {
     }
   }
   #welcome-section {
+    margin-top: 8rem !important;
     p.lead {
       display: inline-block;
       width: 100% !important;
       height: 100%;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 1rem 0;
     }
   }
@@ -194,6 +217,7 @@ ul {
       padding: 0.6rem;
     }
   }
+
   .project-grid {
     display: block;
     & .text-description {
@@ -203,13 +227,13 @@ ul {
 }
 // nav
 
-// .fix-header {
-//   position: fixed !important;
-//   top: 0 !important;
-//   width: 100%;
-//   background: #fff;
-//   z-index: 1;
-// }
+.fix-header {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
 
 #navbar {
   display: flex;
@@ -219,6 +243,7 @@ ul {
   .header-logo {
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #f1f1f1;
     .img-cropper {
       width: 70px;
       height: 70px;
@@ -236,10 +261,15 @@ ul {
 
   .nav-name {
     display: inline-block;
-    padding: 0 1rem;
-    font-size: 1.3rem;
+    font-family: "Adobe Garamond Pro", "MS PMincho", serif;
+    padding: 0;
+    font-size: 1.5rem;
     font-weight: bold;
+    &:hover {
+      color: #999999;
+    }
   }
+
   ul {
     display: flex;
   }
@@ -294,8 +324,7 @@ ul {
 
 // welcome section
 #welcome-section {
-  // margin-top: 7rem;
-  height: auto;
+  margin-top: 7rem;
   p.lead {
     display: block;
     width: 70%;
@@ -307,7 +336,7 @@ ul {
 // about
 
 .about-wrap {
-  background-color: rgba(211, 211, 211, 0.526);
+  background-color: rgba(211, 211, 211, 0.426);
   color: $dark-color;
   display: flex;
   .text-wrap {
@@ -317,7 +346,7 @@ ul {
     height: 100%;
   }
   .skill-wrap ul {
-    padding: 5rem 5rem;
+    padding: 6rem 5rem;
     width: 100%;
     height: 100%;
     & li {
@@ -329,10 +358,11 @@ ul {
 // footer
 
 #footer {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   color: #fff;
   background-color: #000;
-  margin: 1rem 0;
+  margin: 0;
+  font-weight: 100;
   & .links {
     display: flex;
     flex-direction: row;
@@ -340,6 +370,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     color: #fff !important ;
+    font-weight: 200;
   }
   & .links ul {
     display: flex;
@@ -348,9 +379,11 @@ ul {
     & li {
       padding-right: 1.5rem;
       font-size: 1.2rem;
+
       color: #fff;
       & a {
         color: #fff;
+        font-size: 1rem;
       }
       & a:hover {
         color: $primary-color;
@@ -365,6 +398,46 @@ ul {
   }
 }
 
-// #section-wrap {
-//   min-height: 50vh;
-// }
+// workpages
+
+#project-title-big {
+  margin-top: 8rem;
+  padding: 0 8rem;
+}
+
+.project-title-inner {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+#poject-presentation {
+  margin: 4rem 0;
+  padding: 0 8rem;
+  & .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+.singleFooter > a {
+  margin: 80px auto;
+  display: block;
+  position: relatve;
+  height: 70px;
+  line-height: 70px;
+  padding: 0;
+  text-align: center;
+}
+
+// workpages-RWD
+@media (max-width: 786px) {
+  #project-title-big {
+    margin-top: 12rem;
+    padding: 0 1rem;
+  }
+
+  #poject-presentation {
+    padding: 0 1rem;
+  }
+}
